@@ -1,9 +1,9 @@
 {
   "private": true,
   "engines": {
-    "node": "^22.5.1"
+    "node": "^22"
   },
   "dependencies": {
-    "helpful-information": "https://github.com/rodekruis/helpful-information/tarball/v24.09.0"
+    "helpful-information": "https://github.com/rodekruis/helpful-information/tarball/v24.10.0"
   }
 }

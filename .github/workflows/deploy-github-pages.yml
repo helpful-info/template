@@ -170,7 +170,8 @@ jobs:
           NG_PRODUCTION: 'true'
           GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
           GOOGLE_SHEETS_API_URL: 'https://sheets.googleapis.com/v4/spreadsheets'
-          AI_CONNECTION_STRING: ${{ secrets.AI_CONNECTION_STRING }}
+          MATOMO_CONNECTION_STRING: ${{ vars.MATOMO_CONNECTION_STRING }}
+          AI_CONNECTION_STRING: ${{ vars.AI_CONNECTION_STRING }}
 
       - name: Add generic files
         run: 'cp -r ./public/. www/'

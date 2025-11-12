@@ -15,6 +15,11 @@ env:
   # When using "Q&A"s, you can enable search: (set to 'true' / 'false')
   NG_USE_Q_AND_A_SEARCH: 'true'
   #
+  # (Optional) Search-feature via API
+  #   - Requires: NG_USE_Q_AND_A_SEARCH to be 'true'!
+  #   - Requires: SEARCH_API to be set to the URL of the Search-API used. (See below; Set by default)
+  NG_USE_SEARCH_VIA_API: 'false'
+  #
   # Enable Feedback-prompt on Sub-Category and Offer pages (set to 'true' / 'false')
   NG_USE_FEEDBACK_PROMPT: 'false'
   #
@@ -173,6 +178,7 @@ jobs:
           NG_PRODUCTION: 'true'
           GOOGLE_SHEETS_API_KEY: ${{ secrets.GOOGLE_SHEETS_API_KEY }}
           GOOGLE_SHEETS_API_URL: 'https://sheets.googleapis.com/v4/spreadsheets'
+          SEARCH_API: 'https://hia-search.azurewebsites.net/'
 
       - name: Add generic files
         run: 'cp -r ./public/. www/'

@@ -72,7 +72,7 @@ env:
   # Contents of the 'error-page'
   #
   TXT_ERROR_HEADER: 'Data Unavailable'
-  # This Sentence will be followd by a link to the "Contact-URL" set below
+  # This sentence will be followed by a link to the "Contact-URL" set below
   TXT_ERROR_MESSAGE: 'Reach out to us at: '
   # Provide a URL that has contact-information on it, or a `mailto:contact@example.org`-URL
   TXT_ERROR_CONTACT_URL: 'https://github.com/${{ github.repository }}'
@@ -96,7 +96,7 @@ env:
   # The readable label(s) on the link to the region-page
   REGIONS_LABELS: >-
     Information
-  # The ID of the Google Sheet(s) that contains the content for the region
+  # The ID(s) of the Google Sheet(s) that contains the content for the region
   REGIONS_SHEET_IDS: >-
     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 

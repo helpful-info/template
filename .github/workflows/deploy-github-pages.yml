@@ -72,7 +72,7 @@ env:
   # Contents of the 'error-page'
   #
   TXT_ERROR_HEADER: 'Data Unavailable'
-  # This Sentence will be followd by a link to the "Contact-URL" set below
+  # This sentence will be followed by a link to the "Contact-URL" set below
   TXT_ERROR_MESSAGE: 'Reach out to us at: '
   # Provide a URL that has contact-information on it, or a `mailto:contact@example.org`-URL
   TXT_ERROR_CONTACT_URL: 'https://github.com/${{ github.repository }}'
@@ -96,7 +96,7 @@ env:
   # The readable label(s) on the link to the region-page
   REGIONS_LABELS: >-
     Information
-  # The ID of the Google Sheet(s) that contains the content for the region
+  # The ID(s) of the Google Sheet(s) that contains the content for the region
   REGIONS_SHEET_IDS: >-
     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
@@ -143,10 +143,10 @@ jobs:
           echo "::error file=.github/workflows/deploy-github-pages.yml::Please change the ENV configuration to real-world values" && exit 1
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: 'package.json'
           cache-dependency-path: 'package.json'
@@ -186,7 +186,7 @@ jobs:
           enablement: true
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: 'www'
 
